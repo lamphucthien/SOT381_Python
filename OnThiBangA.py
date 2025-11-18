@@ -22,7 +22,6 @@ while i <= n : # Đếm số lượng số nguyên tố từ 2 đến n
     if kiem_tra:
         dem += 1
     i += 1
-
 print(dem)
 
 if n <= 1: # Kiểm tra n có phải số nguyên tố hay không
