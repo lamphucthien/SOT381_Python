@@ -43,16 +43,28 @@ else:
 tich = 1              # Tính giai thừa
 k = 1
 while k <= n:
-    tich *= i
+    tich *= k #
     k += 1
     
 max_val = 0     # min_val = n + 1      # Nhập số nguyên n. Tìm số lớn nhất từ 1 → n chia hết cho 2 và 3 nhưng không chia hết cho 5. Nếu không có số nào thì in 0.
 l = 1
-while i <= n:
-    if i % 2 == 0 and i % 3 == 0 and i % 5 != 0:
-        if i > max_val: # i < min_val
-            max_val = i # min_val = i
+while l <= n:
+    if l % 2 == 0 and l % 3 == 0 and l % 5 != 0:
+        if l > max_val: # i < min_val
+            max_val = l # min_val = i
 
-    i += 1
+    l += 1
 
 print(max_val) # print(min_val)
+
+
+max_digit = 0 # Nhập số nguyên n. In ra chữ số lớn nhất và chữ số nhỏ nhất của n.Input:482915 Output:9 1 (max = 9 ; min = 1)
+min_digit = 9
+while n > 0: #
+    digit = n % 10 #
+    if digit > max_digit:
+        max_digit = digit
+    if digit < min_digit:
+        min_digit = digit
+    n //= 10 #
+print(max_digit, min_digit)
