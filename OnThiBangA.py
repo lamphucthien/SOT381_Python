@@ -1,5 +1,3 @@
-
-
 n = int(input())
 
 # 1. Tổng các số từ 1 đến n chia hết cho 3 hoặc 5
