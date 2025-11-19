@@ -1,70 +1,55 @@
-n = int(input(""))
-tong = 0
-dem = 0
-t = 1
-i = 2
 
-while t <= n:             # Tính tổng các số từ 1 đến n chia hết cho 3 hoặc 5
-    if t % 3 == 0 or t % 5 == 0:
-        tong += t
-    t += 1
+
+n = int(input())
+
+# 1. Tổng các số từ 1 đến n chia hết cho 3 hoặc 5
+tong = 0
+for i in range(1, n+1):
+    if i % 3 == 0 or i % 5 == 0:
+        tong += i
 print(tong)
 
-while i <= n :            # Đếm số lượng số nguyên tố từ 2 đến n
-    kiem_tra = True  #Bắt đầu kiểm tra số nguyên tố
-    j = 2
-
-    while j < i:
-        if i % j == 0:  # TH không phải là số nguyên tố
-            kiem_tra = False 
+# 2. Đếm số lượng số nguyên tố từ 2 đến n
+dem = 0
+for i in range(2, n+1):
+    la_nt = True
+    for j in range(2, i):
+        if i % j == 0:
+            la_nt = False
             break
-        j += 1
-    if kiem_tra:
+    if la_nt:
         dem += 1
-    i += 1
 print(dem)
 
-if n <= 1:                 #Kiểm tra n có phải số nguyên tố hay không
+# 3. Kiểm tra n có phải số nguyên tố không → YES/NO
+if n <= 1:
     print("NO")
 else:
-    kiem_tra = True
-    j = 2
-
-    while j < n:
+    la_nt = True
+    for j in range(2, n):
         if n % j == 0:
-            kiem_tra = False
+            la_nt = False
             break
-        j += 1
-    if kiem_tra:
-        print("YES")
-    else:
-        print("NO")
+    print("YES" if la_nt else "NO")
 
-tich = 1              # Tính giai thừa
-k = 1
-while k <= n:
-    tich *= k #
-    k += 1
-    
-max_val = 0     # min_val = n + 1      # Nhập số nguyên n. Tìm số lớn nhất từ 1 → n chia hết cho 2 và 3 nhưng không chia hết cho 5. Nếu không có số nào thì in 0.
-l = 1
-while l <= n:
-    if l % 2 == 0 and l % 3 == 0 and l % 5 != 0:
-        if l > max_val: # i < min_val
-            max_val = l # min_val = i
+# 4. Tính giai thừa n!
+tich = 1
+for i in range(1, n+1):
+    tich *= i
+print(tich)
 
-    l += 1
+# 5. Số lớn nhất ≤ n chia hết cho 2 và 3, nhưng KHÔNG chia hết cho 5 (nếu không có → 0)
+max_val = 0
+for i in range(1, n+1):
+    if i % 2 == 0 and i % 3 == 0 and i % 5 != 0:
+        max_val = i        # tự động giữ lại số lớn nhất vì duyệt từ nhỏ → lớn
+print(max_val)
 
-print(max_val) # print(min_val)
-
-
-max_digit = 0 # Nhập số nguyên n. In ra chữ số lớn nhất và chữ số nhỏ nhất của n.Input:482915 Output:9 1 (max = 9 ; min = 1)
-min_digit = 9
-while n > 0: #
-    digit = n % 10 #
-    if digit > max_digit:
-        max_digit = digit
-    if digit < min_digit:
-        min_digit = digit
-    n //= 10 #
-print(max_digit, min_digit)
+# 6. In chữ số lớn nhất và nhỏ nhất của n (xử lý cả n=0 và số âm)
+if n == 0:
+    print(0, 0)
+else:
+    s = str(abs(n))           # chuyển thành chuỗi, abs để xử lý số âm
+    max_digit = max(s)        # max chuỗi là chữ số lớn nhất
+    min_digit = min(s)        # min chuỗi là chữ số nhỏ nhất
+    print(max_digit, min_digit)
