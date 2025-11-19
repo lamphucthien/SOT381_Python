@@ -43,15 +43,52 @@ for i in range(1, n+1):
         max_val = i        # tự động giữ lại số lớn nhất vì duyệt từ nhỏ → lớn
 print(max_val)
 
-# 6. In chữ số lớn nhất và nhỏ nhất của n (xử lý cả n=0 và số âm)
-if n == 0:
-    print(0, 0)
-else:
-    s = str(abs(n))           # chuyển thành chuỗi, abs để xử lý số âm
-    max_digit = max(s)        # max chuỗi là chữ số lớn nhất
-    min_digit = min(s)        # min chuỗi là chữ số nhỏ nhất
-    print(max_digit, min_digit)
+# 6. In chữ số lớn nhất và nhỏ nhất của n 
+n = int(input().strip())
+max_val = 0
+min_val = 9
+while n > 0:
+    digit = n % 10
+    if digit > max_val:
+        max_val = digit
+    if digit < min_val:
+        min_val = digit
+    n //= 10
+print(max_val, min_val)
 
 n = int(input().strip()) # Bảng cửu chương n
 for i in range(1, 11):
     print(f"{n} x {i} = {n*i}")
+
+# Fibonacci
+
+# Dạng a — In n số đầu tiên
+
+n = int(input())
+a = 0
+b = 1
+i = 0
+while i < n:
+    print(a, end=' ')
+    c = a + b
+    a = b
+    b = c
+    i += 1
+
+# Dạng b — Tìm số thứ n
+
+n = int(input())
+if n == 0:
+    print(0)
+elif n == 1:
+    print(1)
+else:
+    a = 0
+    b = 1
+    i = 2
+    while i <= n:
+        c = a + b
+        a = b
+        b = c
+        i += 1
+    print(b)
