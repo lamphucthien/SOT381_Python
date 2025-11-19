@@ -51,3 +51,7 @@ else:
     max_digit = max(s)        # max chuỗi là chữ số lớn nhất
     min_digit = min(s)        # min chuỗi là chữ số nhỏ nhất
     print(max_digit, min_digit)
+
+n = int(input().strip()) # Bảng cửu chương n
+for i in range(1, 11):
+    print(f"{n} x {i} = {n*i}")
