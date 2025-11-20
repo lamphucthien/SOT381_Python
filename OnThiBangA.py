@@ -64,9 +64,9 @@ print(max_val, min_val)
 n = int(input().strip())
 tong = 0
 while n > 0:
-    degit = n % 10
+    digit = n % 10
     n //= 10
-    tong += degit
+    tong += digit
 print(tong)
 
 # Fibonacci
