@@ -1,4 +1,4 @@
-n = int(input())
+n = int(input().strip())
 
 # 1. Tổng các số từ 1 đến n chia hết cho 3 hoặc 5
 tong = 0
@@ -20,16 +20,21 @@ for i in range(2, n+1):
 print(dem)
 
 # 3. Kiểm tra n có phải số nguyên tố không → YES/NO
+n = int(input())
 if n <= 1:
     print("NO")
+elif n == 2:
+    print("YES")
 else:
-    la_nt = True
-    for j in range(2, n):
-        if n % j == 0:
-            la_nt = False
-            break
-    print("YES" if la_nt else "NO")
+    j = int(n ** 0.5)
+    kiem_tra = True
 
+    for i in range(2, j + 1):
+        if n % i == 0:
+            kiem_tra = False
+            break
+
+    print("YES" if kiem_tra else "NO")
 # 4. Tính giai thừa n!
 tich = 1
 for i in range(1, n+1):
@@ -115,3 +120,8 @@ while a != b:
 
 # Khi vòng lặp dừng, a và b bằng nhau và chính là UCLN
 print(a)
+
+#Tính 1+2+3...+n
+n = int(input().strip())
+tong = n * (n + 1) // 2 
+print(tong)
