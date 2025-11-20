@@ -125,3 +125,9 @@ print(a)
 n = int(input().strip())
 tong = n * (n + 1) // 2 
 print(tong)
+
+# In tam giác vuông
+h = int(input().strip())
+
+for i in range(1, h + 1):
+    print('*' * i)
