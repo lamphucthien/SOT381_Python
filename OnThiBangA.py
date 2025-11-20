@@ -43,6 +43,10 @@ for i in range(1, n+1):
         max_val = i        # tự động giữ lại số lớn nhất vì duyệt từ nhỏ → lớn
 print(max_val)
 
+n = int(input().strip()) # In bảng cửu chương n
+for i in range(1, 11):
+    print(f"{n} x {i} = {n*i}")
+
 # 6. In chữ số lớn nhất và nhỏ nhất của n 
 n = int(input().strip())
 max_val = 0
@@ -56,9 +60,14 @@ while n > 0:
     n //= 10
 print(max_val, min_val)
 
-n = int(input().strip()) # Bảng cửu chương n
-for i in range(1, 11):
-    print(f"{n} x {i} = {n*i}")
+#Tổng chữ số
+n = int(input().strip())
+tong = 0
+while n > 0:
+    degit = n % 10
+    n //= 10
+    tong += degit
+print(tong)
 
 # Fibonacci
 
@@ -92,3 +101,17 @@ else:
         b = c
         i += 1
     print(b)
+
+#Ước Chung Lớn Nhất (UCLN)
+a = int(input().strip())
+b = int(input().strip())
+
+# Lặp khi a và b chưa bằng nhau
+while a != b:
+    if a > b:
+        a = a - b  # Nếu a lớn hơn, cắt bớt a
+    else:
+        b = b - a  # Nếu b lớn hơn, cắt bớt b
+
+# Khi vòng lặp dừng, a và b bằng nhau và chính là UCLN
+print(a)
