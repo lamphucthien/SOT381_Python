@@ -67,12 +67,12 @@ print(max_val, min_val)
 
 #7 Đảo ngược số nguyên
 n = int(input())
-reversed_n = 0
+r = 0
 while n > 0:
     digit = n % 10
-    reversed_n = reversed_n * 10 + digit
+    r = r * 10 + digit
     n = n // 10
-print(reversed_n)
+print(r)
 
 #8 Tổng chữ số
 n = int(input().strip())
@@ -132,7 +132,7 @@ print(a)
 
 #11 Tính 1+2+3...+n
 n = int(input().strip())
-tong = n * (n + 1) // 2 
+tong = n * (n + 1) // 2
 print(tong)
 
 #12 In tam giác vuông
@@ -149,7 +149,7 @@ while temp > 0:
     digit = temp % 10
     r = r * 10 + digit
     temp //= 10
-if n == r:
+if n == r: #
     print("YES")
 else:
     print("NO")
