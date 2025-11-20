@@ -65,7 +65,16 @@ while n > 0:
     n //= 10
 print(max_val, min_val)
 
-#Tổng chữ số
+#7 Đảo ngược số nguyên
+n = int(input())
+reversed_n = 0
+while n > 0:
+    digit = n % 10
+    reversed_n = reversed_n * 10 + digit
+    n = n // 10
+print(reversed_n)
+
+#8 Tổng chữ số
 n = int(input().strip())
 tong = 0
 while n > 0:
@@ -74,7 +83,7 @@ while n > 0:
     tong += digit
 print(tong)
 
-# Fibonacci
+#9 Fibonacci
 
 # Dạng a — In n số đầu tiên
 
@@ -107,7 +116,7 @@ else:
         i += 1
     print(b)
 
-#Ước Chung Lớn Nhất (UCLN)
+#10 Ước Chung Lớn Nhất (UCLN)
 a = int(input().strip())
 b = int(input().strip())
 
@@ -121,13 +130,26 @@ while a != b:
 # Khi vòng lặp dừng, a và b bằng nhau và chính là UCLN
 print(a)
 
-#Tính 1+2+3...+n
+#11 Tính 1+2+3...+n
 n = int(input().strip())
 tong = n * (n + 1) // 2 
 print(tong)
 
-# In tam giác vuông
+#12 In tam giác vuông
 h = int(input().strip())
 
 for i in range(1, h + 1):
     print('*' * i)
+
+#13 kiểm tra số đối xứng ( kết hợp đảo ngược số và rẽ nhánh )
+n = int(input())
+temp = n # BẮT BUỘC PHẢI LƯU BIẾN TẠM TRONG BÀI NÀY
+r = 0
+while temp > 0:
+    digit = temp % 10
+    r = r * 10 + digit
+    temp //= 10
+if n == r:
+    print("YES")
+else:
+    print("NO")
