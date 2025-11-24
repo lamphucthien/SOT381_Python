@@ -13,3 +13,4 @@ while True:
     print("K= ", c_to_k(C))
  except ValueError:
      print("Vui lòng nhập số hợp lệ: ")
+     
