@@ -101,20 +101,15 @@ while i < n:
 # Dạng b — Tìm số thứ n
 
 n = int(input())
-if n == 0:
-    print(0)
-elif n == 1:
-    print(1)
-else:
-    a = 0
-    b = 1
-    i = 2
-    while i <= n:
-        c = a + b
-        a = b
-        b = c
-        i += 1
-    print(b)
+a = 0
+b = 1
+i = 2
+while i <= n:
+    c = a + b
+    a = b
+    b = c
+    i += 1
+print(b)
 
 #10 Ước Chung Lớn Nhất (UCLN)
 a = int(input().strip())
