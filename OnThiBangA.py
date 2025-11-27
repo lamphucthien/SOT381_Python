@@ -153,3 +153,14 @@ if n == r: #
     print("YES")
 else:
     print("NO")
+
+# Bài FOR8 Ntucoder
+n = int(input())
+MOD = 10**9 + 7
+
+u1, u2 = 1, 1
+
+for i in range(n - 2):
+    u1, u2 = u2, (3 * u2 - u1) % MOD
+
+print(u2)
