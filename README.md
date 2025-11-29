@@ -6,9 +6,10 @@ I am Thien from Vietnam, currently in my **first year** of Computer Science at N
 
 Skills: PYTHON 
 
-- 🔭 I’m currently working on Home and school 
+- 🔭 I’m currently working at Home and School 
 - 🌱 I’m currently learning Python 
 
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/lamphucthien)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/phúc-thiện-lâm-8b35a3329/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg' alt='facebook' height='40'>](https://www.facebook.com/lam.phuc.thien.797623)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/hackerrank.svg' alt='hackerrank' height='40'>](https://www.hackerrank.com/profile/lamphucthien36)  
+
 
