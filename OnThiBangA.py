@@ -112,18 +112,13 @@ while i <= n:
 print(b)
 
 #10 Ước Chung Lớn Nhất (UCLN)
-a = int(input().strip())
-b = int(input().strip())
-
-# Lặp khi a và b chưa bằng nhau
-while a != b:
-    if a > b:
-        a = a - b  # Nếu a lớn hơn, cắt bớt a
-    else:
-        b = b - a  # Nếu b lớn hơn, cắt bớt b
-
-# Khi vòng lặp dừng, a và b bằng nhau và chính là UCLN
-print(a)
+import sys
+def main():
+    a, b = map(int, sys.stdin.readline().split())
+    while b:
+        a, b = b, a%b
+    print(a)
+main()
 
 #11 Tính 1+2+3...+n
 n = int(input().strip())
