@@ -161,7 +161,7 @@ import math
 a = int(input())
 can = math.sqrt(a) # Căn a 
 can_nguyen = round(can) # Làm tròn số vừa căn
-if can * can == a: # nhân ngược lại xem có bằng số cần kiểm tra
+if can_nguyen * can_nguyen == a: # nhân ngược lại xem có bằng số cần kiểm tra
     print("YES")
 else:
     print("NO")
