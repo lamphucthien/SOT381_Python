@@ -7,11 +7,21 @@ for i in range(1, n+1):
         tong += i
 print(tong)
 
+#1.1 Tổng chữ số chẵn
+n = int(input())
+tong = 0
+while n > 0:
+    digit = n % 10
+    if digit % 2 == 0: # Chỉ cộng nếu là chẵn
+        tong += digit
+    n //= 10
+print(tong)
+
 # 2. Đếm số lượng số nguyên tố từ 2 đến n
 dem = 0
 for i in range(2, n+1):
     la_nt = True
-    for j in range(2, int(i**0.5)):
+    for j in range(2, int(i**0.5) + 1):
         if i % j == 0:
             la_nt = False
             break
@@ -26,11 +36,11 @@ if n <= 1:
 elif n == 2:
     print("YES")
 else:
-     for i in range(2, n+1):
-    la_nt = True
-    for j in range(2, int(i**0.5)):
-        if i % j == 0:
-            la_nt = False
+    kiem_tra = True
+    # Chỉ chạy đến căn bậc 2 của n
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            kiem_tra = False
             break
     print("YES" if kiem_tra else "NO")
 # 4. Tính giai thừa n!
@@ -41,7 +51,7 @@ print(tich)
 
 # 5. Số lớn nhất ≤ n chia hết cho 2 và 3, nhưng KHÔNG chia hết cho 5 (nếu không có → 0)
 max_val = 0
-for i in range(1, n+1):
+for i in range(n, 0, -1): # Nhanh hơn range(1 , n+1)
     if i % 2 == 0 and i % 3 == 0 and i % 5 != 0:
         max_val = i        # tự động giữ lại số lớn nhất vì duyệt từ nhỏ → lớn
 print(max_val)
