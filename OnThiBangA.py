@@ -169,8 +169,7 @@ else:
 import sys
 n = int(sys.stdin.readline())
 dem = 0
-#chia 5
 while n >= 5:
-    n //= 5    # Chia nguyên cho 5
-    dem += n   # Cộng dồn kết quả
+    n //= 5
+    dem += n
 print(dem)
