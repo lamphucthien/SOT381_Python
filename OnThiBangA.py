@@ -54,14 +54,17 @@ for i in range(1, 11):
 n = int(input().strip())
 max_val = 0
 min_val = 9
-while n > 0:
-    digit = n % 10
-    if digit > max_val:
-        max_val = digit
-    if digit < min_val:
-        min_val = digit
-    n //= 10
-print(max_val, min_val)
+if n == 0:
+    print(0, 0)
+else:
+    while n > 0:
+        digit = n % 10
+        if digit > max_val:
+            max_val = digit
+        if digit < min_val:
+            min_val = digit
+        n //= 10
+    print(max_val, min_val)
 
 #7 Đảo ngược số nguyên
 n = int(input())
