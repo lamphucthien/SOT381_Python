@@ -11,7 +11,7 @@ print(tong)
 dem = 0
 for i in range(2, n+1):
     la_nt = True
-    for j in range(2, i):
+    for j in range(2, int(i**0.5)):
         if i % j == 0:
             la_nt = False
             break
@@ -26,14 +26,12 @@ if n <= 1:
 elif n == 2:
     print("YES")
 else:
-    j = int(n ** 0.5)
-    kiem_tra = True
-
-    for i in range(2, j + 1):
-        if n % i == 0:
-            kiem_tra = False
+     for i in range(2, n+1):
+    la_nt = True
+    for j in range(2, int(i**0.5)):
+        if i % j == 0:
+            la_nt = False
             break
-
     print("YES" if kiem_tra else "NO")
 # 4. Tính giai thừa n!
 tich = 1
