@@ -167,7 +167,7 @@ else:
 
 #15 Đếm số lượng số 0 sau N!
 import sys
-n = int(sys.stdin.readline())
+n = int(sys.stdin.read())
 dem = 0
 while n >= 5:
     n //= 5
