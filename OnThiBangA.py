@@ -154,3 +154,13 @@ for i in range(n - 2):
     u1, u2 = u2, (3 * u2 - u1) % MOD
 
 print(u2)
+
+#14 Kiểm tra số chính phương
+import math
+a = int(input())
+can = math.sqrt(a) # Căn a 
+can_nguyen = round(can) # Làm tròn số vừa căn
+if can * can == a: # nhân ngược lại xem có bằng số cần kiểm tra
+    print("YES")
+else:
+    print("NO")
