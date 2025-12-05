@@ -164,3 +164,13 @@ if can * can == a: # nhân ngược lại xem có bằng số cần kiểm tra
     print("YES")
 else:
     print("NO")
+
+#15 Đếm số lượng số 0 sau N!
+import sys
+n = int(sys.stdin.readline())
+dem = 0
+#chia 5
+while n >= 5:
+    n //= 5    # Chia nguyên cho 5
+    dem += n   # Cộng dồn kết quả
+print(dem)
