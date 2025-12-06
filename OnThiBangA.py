@@ -154,6 +154,12 @@ if n == r: #
     print("YES")
 else:
     print("NO")
+# Hoặc cách ngắn gọn hơn nếu đề ko yêu cầu dùng loop
+n = input()
+if n == n[::-1]:
+    print("YES")
+else:
+    print("NO")
 
 # Bài FOR8 Ntucoder
 n = int(input())
