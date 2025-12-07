@@ -16,6 +16,7 @@ while n > 0:
         tong += digit
     n //= 10
 print(tong)
+
 #1.2 Kiểm tra số nguyên tổ và đếm, tổng các số nt
 import sys
 
