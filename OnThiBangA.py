@@ -54,18 +54,15 @@ print(dem)
 
 # 3. Kiểm tra n có phải số nguyên tố không → YES/NO
 n = int(input())
-if n <= 1:
-    print("NO")
-elif n == 2:
-    print("YES")
-else:
+if n >= 2:
     kiem_tra = True
-    # Chỉ chạy đến căn bậc 2 của n
     for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             kiem_tra = False
             break
     print("YES" if kiem_tra else "NO")
+else:
+    print("NO")
 # 4. Tính giai thừa n!
 tich = 1
 for i in range(1, n+1):
