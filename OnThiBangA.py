@@ -16,6 +16,28 @@ while n > 0:
         tong += digit
     n //= 10
 print(tong)
+#1.2 Kiểm tra số nguyên tổ và đếm, tổng các số nt
+import sys
+
+def kiem_tra_nt(k): # Hàm chứa ct kiểm tra số nt
+    if k < 2:
+        return False
+
+    for i in range(2, int(k ** 0.5) + 1):
+        if k % i == 0:
+            return False
+    return True
+
+def main():
+    n = list(map(int, sys.stdin.readline().split()))
+    tong = 0
+    dem = 0
+    for j in n: # dùng vòng lặp để kiểm tra các số trong list
+        if kiem_tra_nt(j):
+            tong += j
+            dem += 1
+    print(dem , tong)
+main()
 
 # 2. Đếm số lượng số nguyên tố từ 2 đến n
 dem = 0
