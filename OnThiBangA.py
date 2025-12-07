@@ -76,7 +76,7 @@ print(tich)
 max_val = 0
 for i in range(n, 0, -1): # Nhanh hơn range(1 , n+1)
     if i % 2 == 0 and i % 3 == 0 and i % 5 != 0:
-        max_val = i        # tự động giữ lại số lớn nhất vì duyệt từ nhỏ → lớn
+        max_val = i        # tự động giữ lại số lớn nhất vì duyệt từ lớn -> nhỏ
 print(max_val)
 
 n = int(input().strip()) # In bảng cửu chương n
