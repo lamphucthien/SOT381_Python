@@ -1,3 +1,3 @@
-#Các bài ôn tập Python
+## Practice
 
-#By Lâm Phúc Thiện
+### By Lâm Phúc Thiện
