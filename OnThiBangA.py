@@ -210,3 +210,32 @@ while n >= 5:
     n //= 5
     dem += n
 print(dem)
+
+# Tính tiền điện
+
+Bậc 1	Từ 0 đến 50	    1.678
+Bậc 2	Từ 51 đến 100	1.734
+Bậc 3	Từ 101 đến 200	2.014
+Bậc 4	Từ 201 đến 300	2.536
+Bậc 5	Từ 301 đến 400	2.834
+Bậc 6	Trên 400	    2.927
+
+kwh = int(input())
+tien = 0
+if kwh > 400:
+    tien += (kwh - 400) * 2927
+    kwh = 400
+if kwh > 300:
+    tien += (kwh - 300) * 2834
+    kwh = 300
+if kwh > 200:
+    tien += (kwh - 200) * 2536
+    kwh = 200
+if kwh > 100:
+    tien += (kwh - 100) * 2014
+    kwh = 100
+if kwh > 50:
+    tien += (kwh - 50) * 1734
+    kwh = 50
+tien += kwh * 1678
+print(tien)
