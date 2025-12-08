@@ -211,7 +211,7 @@ while n >= 5:
     dem += n
 print(dem)
 
-# Tính tiền điện
+#16 Tính tiền điện
 
 Bậc 1	Từ 0 đến 50	    1.678
 Bậc 2	Từ 51 đến 100	1.734
