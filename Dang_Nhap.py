@@ -1,6 +1,6 @@
-m = 3
-n = 0
-while n < m:
+m = 3 #Giới hạn nhập
+n = 0 #Giá trị bắt đầu
+while True:
     r = m - n
     inf = input(f"Hãy nhập Y hoặc y, bạn còn {r} lần nhập: ")
     if inf.lower() == 'y':
