@@ -1,5 +1,5 @@
 m = 3 #Giới hạn nhập
-n = 0 #Giá trị bắt đầu
+n = 0 #Số lần nhập sai
 while True:
     r = m - n
     inf = input(f"Hãy nhập Y hoặc y, bạn còn {r} lần nhập: ")
