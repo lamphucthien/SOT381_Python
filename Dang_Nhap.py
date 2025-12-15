@@ -9,7 +9,7 @@ while True:
     else:
         n += 1
         if n < m:
-            print(f"Vui lòng nhập lại")
+            print("Vui lòng nhập lại")
         else:
             print("Đăng nhập thất bại. Bạn đã hết số lần nhập.")
             break
