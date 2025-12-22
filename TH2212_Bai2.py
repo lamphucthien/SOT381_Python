@@ -1,11 +1,13 @@
 a, b, c = map(int, input().split())
-max_val = 0
-if a > b and a > c:
-    max_val = a
-    print(f"Số lớn nhất là {max_val}")
-if b > c and b > a:
+max_val = a
+if b > max_val:
     max_val = b
-    print(f"Số lớn nhất là {max_val}")
-if c > a and c > b:
+if c > max_val:
     max_val = c
-    print(f"Số lớn nhất là {max_val}")
+print(f"GTLN là {max_val}")
+min_val = a
+if b < min_val:
+    min_val = b
+if c < min_val:
+    min_val = c
+print(f"GTNN là {min_val}")
