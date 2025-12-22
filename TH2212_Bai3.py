@@ -14,5 +14,5 @@ def so_nn(a, b, c):
     return min_val
 x, y, z = map(int, input().split())
 max_value = so_ln(x, y, z)
-min_value = so_nn(y, x, z)
+min_value = so_nn(x, y, z)
 print(f"GTLN: {max_value}, GTNN: {min_value}")
