@@ -1,4 +1,4 @@
-w, h = map(int, input("Nhập độ dài 2 cạnh (w > 0, h <= 100: ").split())
+w, h = map(int, input("Nhập độ dài 2 cạnh (w > 0, h <= 100): ").split())
 chu_vi = (w + h)*2
 dien_tich = w * h
 if w < 0 and h > 100:
